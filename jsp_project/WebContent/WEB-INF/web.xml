@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>jsp_project</display-name>
+	<welcome-file-list>
+		<welcome-file>jstlformattingexamples.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--these lines are for jsp config example. -->
+	<servlet>
+		<servlet-name>ConfigExample</servlet-name>
+		<jsp-file>/welcome.jsp</jsp-file>
+
+		<init-param>
+			<param-name>dName</param-name>
+			<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ConfigExample</servlet-name>
+		<url-pattern>/welcome.jsp</url-pattern>
+	</servlet-mapping>
+
+	<!--these lines are for application example(context method).. -->
+	<servlet>
+		<servlet-name>sonoojaiswal</servlet-name>
+		<jsp-file>/applicationexample.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sonoojaiswal</servlet-name>
+		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>dName</param-name>
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+	</context-param>
+
+
+	<!-- <error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page> -->
+
+</web-app>
