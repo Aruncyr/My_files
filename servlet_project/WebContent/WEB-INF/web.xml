@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>servlet_project</display-name>
+	<welcome-file-list>
+		<welcome-file>index3.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>FirstServlet</servlet-name>
+		<servlet-class>com.cyr.servlet.FirstServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FirstServlet</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>First</servlet-name>
+		<servlet-class>com.cyr.servlet.First</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>First</servlet-name>
+		<url-pattern>/second</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DemoServ2</servlet-name>
+		<servlet-class>com.cyr.servlet.DemoServ2</servlet-class>
+
+		<init-param>
+			<param-name>driver</param-name>
+			<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DemoServ2</servlet-name>
+		<url-pattern>/demo3</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DemoServ3</servlet-name>
+		<servlet-class>com.cyr.servlet.DemoServ3</servlet-class>
+	</servlet>
+
+	<context-param>
+		<param-name>dName</param-name>
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+	</context-param>
+
+	<servlet-mapping>
+		<servlet-name>DemoServ3</servlet-name>
+		<url-pattern>/context</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DemoServlet1</servlet-name>
+		<servlet-class>com.cyr.servlet.DemoServlet1</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DemoServlet1</servlet-name>
+		<url-pattern>/servlet1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DemoServlet2</servlet-name>
+		<servlet-class>com.cyr.servlet.DemoServlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DemoServlet2</servlet-name>
+		<url-pattern>/servlet2</url-pattern>
+	</servlet-mapping>
+</web-app>
